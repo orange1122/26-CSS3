@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>伸缩布局</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+		body{
+			background-color: #eee;
+			font-family: "Microsoft Yahei";
+			font-size: 22px;
+		}
+		h3{
+			font-weight: normal;
+		}
+		section{
+			width: 1000px;
+			margin:40px auto;
+			height
+		}
+		ul{
+			background-color: #fff;
+			border:1px solid #ccc;
+		}
+		ul li{
+			width: 200px;
+			height: 200px;
+			background-color: pink;
+			margin: 10px;
+		}
+		/*传统布局*/
+		section:nth-child(1) ul{
+			overflow: hidden;
+		}
+		section:nth-child(1) ul li{
+			float: left;
+		}
+		/*flex布局*/
+		section:nth-child(2) ul{
+			display: flex;
+			flex-direction: row-reverse;
+			/*flex-direction: row;
+			flex-direction:column;
+			flex-direction: column-reverse;*/
+			
+		}
+		section:nth-child(3) ul{
+			display: flex;
+			flex-direction: row-reverse;
+			justify-content:center;
+			
+		}
+		section:nth-child(4) ul{
+			display: flex;
+			flex-direction:column;
+			align-items: flex-end;
+			
+		}
+	</style>
+</head>
+<body>
+	<section>
+		<h3>传统布局</h3>
+		<ul>
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			
+		</ul>
+	</section>
+	<section>
+		<h3>flex布局flex-direction</h3>
+		<ul>
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+		</ul>
+	</section>
+	<section>
+		<h3>flex布局justify-content</h3>
+		<ul>
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+		</ul>
+	</section>
+	<section>
+		<h3>flex布局align-items</h3>
+		<ul>
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+		</ul>
+	</section>
+</body>
+</html>
